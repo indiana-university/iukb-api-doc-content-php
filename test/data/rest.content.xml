@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="US-ASCII"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+        
+        
+        
+    <meta content="2014-09-03T06:00:00-04:00" name="approved-date"/>
+<meta content="default" name="audiences"/>
+<meta content="2016-10-12T13:40:56-04:00" name="last-modified"/>
+<meta content="rest" name="docid"/>
+<title>KMS REST web services</title>
+<meta content="sckb" name="owner"/>
+</head>
+
+<body><h1>KMS REST web services</h1>
+
+<p>The IU Knowledge Management System provides web services through a REST API. This allows customers to pull KMS-hosted content in a standard format (JSON or XHTML) into their own web clients, as well as search content using Solr via the KMS search client.</p>
+
+<p>KMS REST services use Basic Authentication (BasicAuth).</p>
+
+<p>To request information about a KMS REST account for your service, contact <code>kb@iu.edu</code>.  In your request, specify a group email account that will be responsible for the REST account.</p>
+
+<h2>Getting started</h2>
+
+<p>After determining your needs, KMS admins will first create an account for you in the test (STG) environment:</p> <pre class="example">  https://rest-test.kb.iu.edu/</pre>
+
+<p>Note that the test environment may experience slowdowns or outages when we carry out load testing, and does not have a standard window for maintenance or redeployments. We will try to give reasonable notice for these and other performance issues.</p>
+
+<p>When your site or service is ready to move to production, we will then create an account for you in the production environment:</p> <pre class="example">  https://rest.kb.iu.edu/</pre>
+
+<p>For details, see <a class="kba" href="beyy" title="">KMS REST: User creation</a>.</p>
+
+<h2>Using KMS REST web services</h2>
+
+<h3>Document view</h3>
+
+<p>To view a document, make a GET request to:</p> <pre class="example">  /v0/document/<strong>$docid</strong>.(json|xhtml)</pre>
+
+<p><code>$docid</code> is the document ID.</p>
+
+<p>Use custom HTTP headers to configure the request. For instructions, see <a class="kba" href="bezb" title="">KMS REST: Document view</a>.</p>
+
+<h3>Document search</h3>
+
+<p>To search, make a GET request to:</p> <pre class="example">  /v0/search.json</pre>
+
+<p>JSON is the only supported search response.</p>
+
+<p>Pass the search query and other options in HTTP headers. For instructions, see <a class="kba" href="beyz" title="">KMS REST: Document search</a>.</p>
+
+<h3>Sitemap</h3>
+
+<p>Document sitemap is available by GET request to:</p> <pre class="example">  /v0/sitemap.xml</pre>
+
+<p>Use custom HTTP headers to configure the request. For instructions, see <a class="kba" href="bezt" title="">KMS REST: Sitemap</a>.</p>
+
+<h3>Document UUID</h3>
+
+<p>REST customers who need to check their cached copies of KB documents can use the document UUID call to verify they have the latest version by comparing the UUID of the cached copy to the UUID of the live version.</p>
+
+<p>To request a document UUID, make a GET request to:</p> 
+<pre class="example">  /v0/document/uuid/<strong>$docid</strong></pre>
+
+<p><code>$docid</code> is the document ID.</p>
+
+<p>For more detailed instructions, see <a class="kba" href="acwf" title="">KMS REST: Document UUID</a>.</p>
+
+<h2>Code for use with KMS REST</h2>
+
+<p>The KMS development team maintains a repository on the IU enterprise GitHub of sample code demonstrating the use of KMS REST services, and CSS to handle custom KMS content, at:
+</p> <pre class="example">  <a href="https://github.iu.edu/kms/kmsrest-examples" title="">https://github.iu.edu/kms/kmsrest-examples</a></pre>
+
+<p>For more information about GitHub at IU, see <a class="kba" href="bagk" title="">At IU, what is GitHub, and how do I use it?</a> </p>
+</body>
+
+</html>

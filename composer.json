@@ -1,0 +1,47 @@
+{
+    "name": "avitacco/iukb-doc-content",
+    "description": "A class to make presenting knowledge base content easier",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.iu.edu/avitacco/iukb-doc-content",
+    "keywords": [
+        "knowledge",
+        "base",
+        "kb",
+        "uits",
+        "iu"
+    ],
+    "authors": [
+        {
+            "name": "Anthony Vitacco",
+            "email": "avitacco@iu.edu",
+            "homepage": "https://github.iu.edu/avitacco",
+            "role": "developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "~3.4",
+        "phpstan/phpstan": "~0.11",
+        "phpunit/phpunit": "~8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Edu\\Iu\\Uits\\KnowledgeBase\\Document\\": [
+                "src/"
+            ]
+        }
+    },
+    "scripts": {
+        "phpcs": ["vendor/bin/phpcs --standard=PSR2 src test"],
+        "phpcbf": ["vendor/bin/phpcbf --standard=PSR2 src test"],
+        "phpstan": ["vendor/bin/phpstan analyse -l 5 src"],
+        "phpunit": ["vendor/bin/phpunit"],
+        "check-code-format": ["@phpcbf", "@phpcs"],
+        "check-code-quality": ["@phpstan"],
+        "check": ["@check-code-format", "@check-code-quality"],
+        "run-tests": ["@phpunit"]
+    }
+}
