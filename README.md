@@ -1,8 +1,8 @@
-# iukb-doc-content
+# IUKB API - PHP: Content
 A class to make presenting knowledge base content easier
 
 ## Requirements
-* avitacco/iukb-php-api
+* indiana-university/iukb-api-php
 
 ## Usage
 Usage is pretty simple, you simply call the create method statically on the
