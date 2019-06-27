@@ -1,9 +1,9 @@
 {
-    "name": "avitacco/iukb-doc-content",
+    "name": "indiana-university/iukb-api-doc-content-php",
     "description": "A class to make presenting knowledge base content easier",
     "type": "library",
-    "license": "MIT",
-    "homepage": "https://github.iu.edu/avitacco/iukb-doc-content",
+    "license": "BSD-3-Clause",
+    "homepage": "https://github.com/indiana-university/iukb-api-doc-content-php",
     "keywords": [
         "knowledge",
         "base",
@@ -15,12 +15,13 @@
         {
             "name": "Anthony Vitacco",
             "email": "avitacco@iu.edu",
-            "homepage": "https://github.iu.edu/avitacco",
+            "homepage": "https://github.com/avitacco",
             "role": "developer"
         }
     ],
     "require": {
-        "php": "^7.1"
+        "php": "^7.1",
+        "indiana-university/iukb-api-php": "^2.0"
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "~3.4",
