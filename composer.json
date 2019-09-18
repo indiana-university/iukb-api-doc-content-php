@@ -24,9 +24,9 @@
         "indiana-university/iukb-api-php": "^2.0"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "~3.4",
-        "phpstan/phpstan": "~0.11",
-        "phpunit/phpunit": "~8.0"
+        "squizlabs/php_codesniffer": "^3.4",
+        "phpstan/phpstan": "^0.11",
+        "phpunit/phpunit": "^8"
     },
     "autoload": {
         "psr-4": {
@@ -36,8 +36,8 @@
         }
     },
     "scripts": {
-        "phpcs": ["vendor/bin/phpcs --standard=PSR2 src test"],
-        "phpcbf": ["vendor/bin/phpcbf --standard=PSR2 src test"],
+        "phpcs": ["vendor/bin/phpcs --standard=PSR12 src test"],
+        "phpcbf": ["vendor/bin/phpcbf --standard=PSR12 src test"],
         "phpstan": ["vendor/bin/phpstan analyse -l 5 src"],
         "phpunit": ["vendor/bin/phpunit"],
         "check-code-format": ["@phpcbf", "@phpcs"],
